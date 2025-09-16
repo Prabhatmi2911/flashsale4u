@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5G Phones - Product Hub</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Latest 5G Phones</h1>
+        <a href="/" class="button back">Home</a>
+        <div class="product-grid">
+            <% products.forEach(product => { %>
+                <div class="product-card">
+                    <img src="<%= product.image %>" alt="<%= product.name %>">
+                    <h2><%= product.name %></h2>
+                    <p><strong>Storage:</strong> <%= product.storage %></p>
+                    <p><strong>Camera:</strong> <%= product.camera %></p>
+                    <p><strong>Battery:</strong> <%= product.battery %></p>
+                    <p class="price"><%= product.price %></p>
+                    <a class="button" href="<%= product.url %>" target="_blank">Buy Now</a>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>
